@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Test Client Integration Page</title>
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgo=">
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+  </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://apps-qa.bazaarvoice.com/deployments/testcustomer-firebird-siteauth/shilpainpage/production/en_US/bv.js"></script>
+<script> 
+    $BV.configure('global', {});
+ </script>
+</head>
+
+<body>
+  <h1>Rating Summary</h1>
+  <hr>
+  <div id="BVRRSummaryContainer"></div>
+  <h1>Reviews</h1>
+  <hr>
+  <div id="BVRRContainer"></div>
+  <script>
+    $BV.ui('rr', 'show_reviews', {
+      doShowContent: function () { }
+    });
+  </script> 
+</body>
+
+</html>
