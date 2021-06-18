@@ -11,19 +11,19 @@
     }
   </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" src="https://display-qa.ugc.bazaarvoice.com/static/Testcustomer-firebird-siteauth/ShilpaInPage/en_US/bvapi.js"></script>
+<!--<script type="text/javascript" src="https://display-qa.ugc.bazaarvoice.com/static/Testcustomer-firebird-siteauth/ShilpaInPage/en_US/bvapi.js"></script>-->
 <script async src="https://apps-qa.bazaarvoice.com/deployments/testcustomer-firebird-siteauth/shilpainpage/production/en_US/bv.js"></script>
-<script> 
+<!-- <script> 
     $BV.configure('global', {
       productId:'product1'
     });
- </script>
+ </script>-->
 </head>
 
 <body>
   <h1>Rating Summary</h1>
   <hr>
-  <div id="BVRRSummaryContainer"></div>
+ <!--  <div id="BVRRSummaryContainer"></div>
   <h1>Reviews</h1>
   <hr>
   <div id="BVRRContainer"></div>
@@ -31,7 +31,11 @@
     $BV.ui('rr', 'show_reviews', {
       doShowContent: function () { }
     });
-  </script> 
+  </script> -->
+    <div data-bv-show="reviews" data-bv-product-id="product1">
+  </div>
+  <div data-bv-show="questions" data-bv-product-id="product1">
+  </div>
 </body>
 
 </html>
