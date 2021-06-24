@@ -11,7 +11,7 @@
       Username <input type="text" name="userid"/>
       Password <input type="password" name="password"/>
       <div style="margin-top: 10px;">
-        UserToken <textarea rows="10" cols="100" type="text" name="usertoken"></textarea>
+        UserToken <textarea rows="10" cols="100" type="text" name="usertoken" required></textarea>
       </div>
       <div>
       <button id="loginBtn">Login</button>
@@ -30,19 +30,20 @@
 
         event.preventDefault();
         var usertoken = form.usertoken.value;
-        if(form.userid.value == "Username" && form.password.value == "Password")
+        if(form.userid.value == "Username" && form.password.value == "Password" && userToken!==null)
         {
           if(usertoken){
             window.location.href = `https://sulveena2305.github.io/container.html?bveventid=${bveventid}&bvuserToken=${usertoken}`
 
-          } else {
-            window.location.href = "https://sulveena2305.github.io/container.html?bveventid=" + bveventid +"&bvuserToken=1a2e7906d13cdc15914e4f95ab3242a3646174653d3230323030313039267573657269643d766465726b266d61786167653d3930s"
+          } 
+          //else {
+            //window.location.href = "https://sulveena2305.github.io/container.html?bveventid=" + bveventid +"&bvuserToken=1a2e7906d13cdc15914e4f95ab3242a3646174653d3230323030313039267573657269643d766465726b266d61786167653d3930s"
 
-          }
+          //}
         }
         else
         {
-          alert("Error");
+          alert("Please fill all field values");
         }
       }
     </script>
